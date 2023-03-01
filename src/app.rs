@@ -65,31 +65,125 @@ impl eframe::App for TemplateApp {
         });
 
         egui::SidePanel::left("side_panel").show(ctx, |ui| {
-            ui.heading("Side Panel");
+            egui::ScrollArea::vertical().show(ui, |ui| {
+                ui.heading("Side Panel");
 
-            ui.horizontal(|ui| {
-                ui.label("Write something: ");
-                ui.text_edit_singleline(label);
-            });
+                egui::CollapsingHeader::new("Collaping Header 1").default_open(true).show(ui, |ui| {
+                    ui.label("Label");
+                });
 
-            ui.add(egui::Slider::new(value, 0.0..=10.0).text("value"));
-            if ui.button("Increment").clicked() {
-                *value += 1.0;
-            }
+                egui::CollapsingHeader::new("Collaping Header 2").default_open(true).show(ui, |ui| {
+                    ui.label("Label");
+                });
 
-            ui.with_layout(egui::Layout::bottom_up(egui::Align::LEFT), |ui| {
-                ui.horizontal(|ui| {
-                    ui.spacing_mut().item_spacing.x = 0.0;
-                    ui.label("powered by ");
-                    ui.hyperlink_to("egui", "https://github.com/emilk/egui");
-                    ui.label(" and ");
-                    ui.hyperlink_to(
-                        "eframe",
-                        "https://github.com/emilk/egui/tree/master/crates/eframe",
-                    );
-                    ui.label(".");
+                egui::CollapsingHeader::new("Collaping Header 3").default_open(true).show(ui, |ui| {
+                    ui.label("Label");
+                });
+
+                egui::CollapsingHeader::new("Collaping Header 4").default_open(true).show(ui, |ui| {
+                    ui.label("Label");
+                });
+
+                egui::CollapsingHeader::new("Collaping Header 5").default_open(true).show(ui, |ui| {
+                    ui.label("Label");
+                });
+
+                egui::CollapsingHeader::new("Collaping Header 6").default_open(true).show(ui, |ui| {
+                    ui.label("Label");
+                });
+
+                egui::CollapsingHeader::new("Collaping Header 7").default_open(true).show(ui, |ui| {
+                    ui.label("Label");
+                });
+
+                egui::CollapsingHeader::new("Collaping Header 8").default_open(true).show(ui, |ui| {
+                    ui.label("Label");
+                });
+
+                egui::CollapsingHeader::new("Collaping Header 9").default_open(true).show(ui, |ui| {
+                    ui.label("Label");
+                });
+
+                egui::CollapsingHeader::new("Collaping Header 10").default_open(true).show(ui, |ui| {
+                    ui.label("Label");
+                });
+
+                egui::CollapsingHeader::new("Collaping Header 11").default_open(true).show(ui, |ui| {
+                    ui.label("Label");
+                });
+
+                egui::CollapsingHeader::new("Collaping Header 12").default_open(true).show(ui, |ui| {
+                    ui.label("Label");
+                });
+
+                egui::CollapsingHeader::new("Collaping Header 13").default_open(true).show(ui, |ui| {
+                    ui.label("Label");
+                });
+
+                egui::CollapsingHeader::new("Collaping Header 14").default_open(true).show(ui, |ui| {
+                    ui.label("Label");
+                });
+
+                egui::CollapsingHeader::new("Collaping Header 15").default_open(true).show(ui, |ui| {
+                    ui.label("Label");
+                });
+
+                egui::CollapsingHeader::new("Collaping Header 16").default_open(true).show(ui, |ui| {
+                    ui.label("Label");
+                });
+
+                egui::CollapsingHeader::new("Collaping Header 17").default_open(true).show(ui, |ui| {
+                    ui.label("Label");
+
+                    egui::CollapsingHeader::new("Collaping Header 18").default_open(true).show(ui, |ui| {
+                        ui.label("Label");
+                    });
+
+                    egui::CollapsingHeader::new("Collaping Header 19").default_open(true).show(ui, |ui| {
+                        ui.label("Label");
+
+                        egui::CollapsingHeader::new("Collaping Header 18").default_open(true).show(ui, |ui| {
+                            ui.label("Label");
+                        });
+
+                        egui::CollapsingHeader::new("Collaping Header 19").default_open(true).show(ui, |ui| {
+                            ui.label("Label");
+                        });
+                    });
+                });
+
+                egui::CollapsingHeader::new("Collaping Header 18").default_open(true).show(ui, |ui| {
+                    ui.label("Label");
+                });
+
+                egui::CollapsingHeader::new("Collaping Header 19").default_open(true).show(ui, |ui| {
+                    ui.label("Label");
                 });
             });
+
+            // ui.horizontal(|ui| {
+            //     ui.label("Write something: ");
+            //     ui.text_edit_singleline(label);
+            // });
+
+            // ui.add(egui::Slider::new(value, 0.0..=10.0).text("value"));
+            // if ui.button("Increment").clicked() {
+            //     *value += 1.0;
+            // }
+
+            // ui.with_layout(egui::Layout::bottom_up(egui::Align::LEFT), |ui| {
+            //     ui.horizontal(|ui| {
+            //         ui.spacing_mut().item_spacing.x = 0.0;
+            //         ui.label("powered by ");
+            //         ui.hyperlink_to("egui", "https://github.com/emilk/egui");
+            //         ui.label(" and ");
+            //         ui.hyperlink_to(
+            //             "eframe",
+            //             "https://github.com/emilk/egui/tree/master/crates/eframe",
+            //         );
+            //         ui.label(".");
+            //     });
+            // });
         });
 
         egui::CentralPanel::default().show(ctx, |ui| {
